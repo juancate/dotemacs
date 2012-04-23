@@ -1,0 +1,23 @@
+### README for antlr-mode.el: Antlr-Mode for Emacs
+
+## Copyright 2002 Free Software Foundation, Inc.
+##
+## Author: Christoph Wedler <wedler@users.sourceforge.net>
+## Keywords: Emacs, ANTLR, antlr-mode, languages
+## X-URL: http://antlr-mode.sourceforge.net/
+
+
+The Emacs package ANTLR-Mode provides: syntax highlighting for ANTLR grammar
+files, automatic indentation, menus containing rule/token definitions and
+supported options and various other things like running ANTLR from within
+Emacs.
+
+
+Files in the distribution (top level directory "antlr-mode"):
+
+ * README: this file
+ * lisp/antlr-mode.el: main file
+ * lisp/ChangeLog: its detailed ChangeLog file
+ * INSTALL: how to install "lisp/antlr-mode.el"
+
+## README ends here

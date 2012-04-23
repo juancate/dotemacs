@@ -1,0 +1,80 @@
+### INSTALL for antlr-mode.el: ANTLR-Mode for Emacs
+
+## Copyright 2002 Free Software Foundation, Inc.
+##
+## Author: Christoph Wedler <wedler@users.sourceforge.net>
+## Keywords: Emacs, ANTLR, antlr-mode, languages
+## X-URL: http://antlr-mode.sourceforge.net/
+
+
+The installation process with explanations (all files mentioned here are
+relative to top-level directory "antlr-mode/" in the distribution):
+
+
+ 0. You can check whether antlr-mode.el is already included in your Emacs
+    (e.g., Emacs-21+) by visiting an ANTLR grammar file and/or by using:
+
+       M-x locate-library RET antlr-mode.el RET
+
+
+ 1. Copy file "lisp/antlr-mode.el" to your load-path.  That means:
+
+    Use C-h v load-path RET to check the value and the documentation of
+    Emacs' load-path.
+
+    You must copy "lisp/antlr-mode.el" to one of the directories in the
+    value list.  If no directory in the default value is appropriate, you
+    must add "your own" directory to that list.
+
+    The cases:
+
+      (a) You want to copy the file to DIR, i.e., one of the listed
+          directories: copy "lisp/antlr-mode.el" to DIR.
+
+      (b) You use Emacs and install Antlr-Mode in your home directory:
+          create directory "~/.emacs.d/lisp/" and copy "lisp/antlr-mode.el"
+          to it.  Add the following lines at the beginning of your Emacs
+          init file:
+
+             (setq load-path (cons (expand-file-name "~/.emacs.d/lisp")
+                             load-path))
+
+      (c) You use XEmacs-20.3 or higher and install Antlr-Mode in your
+          home directory: create directory
+          "~/.xemacs/xemacs-packages/lisp/".  It will be automatically
+          added to `load-path' if you start XEmacs the next time.
+
+      (d) You install Antlr-Mode system-wide: the target directory is
+          "EMACS/site-lisp/" or "XEMACS/site-packages/lisp/".  But you
+          probably know that if you are responsible for Emacs or XEmacs on
+          your site.
+
+
+ 2. Byte-compile file "antlr-mode.el": visit file "antlr-mode.el" (that is,
+    the copy) and use menu entry
+
+       "Emacs-Lisp"/"Lisp" >> "Byte-compile This File"
+    or
+        M-x byte-compile-file RET antlr-mode.el RET.
+
+
+ 3. Visit your Emacs init file.
+
+     - The Emacs init file is usuall file "~/.emacs".
+     - In XEmacs-21.4 or higher, it is usually "~/.xemacs/init.el".
+     - For a system-wide installation, the init file is "default.el".
+
+    If antlr-mode.el was not already included in your Emacs, add the
+    following lines into your init file (it should be inserted after the
+    lines from case 1b):
+
+       (autoload 'antlr-mode "antlr-mode" nil t)
+       (setq auto-mode-alist (cons '("\\.g\\'" . antlr-mode) auto-mode-alist))
+
+    If you use an older version of speedbar, also include
+
+       (add-hook 'speedbar-load-hook  ; would be too late in antlr-mode.el
+                 (lambda () (speedbar-add-supported-extension ".g")))
+
+
+### INSTALL ends here

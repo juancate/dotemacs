@@ -1,0 +1,367 @@
+2003-08-19  Christoph Wedler  <Christoph.Wedler@sap.com>
+
+	* antlr-mode.el: Version 2.2c.
+
+2003-08-05  Christoph Wedler  <Christoph.Wedler@sap.com>
+
+	* antlr-mode.el: Make major mode work with cc-mode-5.30+.  Works
+	best with cc-mode 5.30.5 or higher.
+	Reported by Ville Skyttä <scop@xemacs.org>.
+	(antlr-c-init-language-vars): New function.
+	(antlr-mode): Use it with cc-mode before v5.29.
+	(antlr-c-common-init): Don't set some local vars here.
+	(antlr-mode): Set them here.
+	(antlr-c-forward-sws): New function alias.
+	(antlr-mode): Redefine with cc-mode before v5.30.
+	(antlr-skip-sexps): Use it.
+	(antlr-skip-exception-part): Ditto.
+	(antlr-skip-file-prelude): Ditto.
+	(antlr-outside-rule-p): Ditto.
+	(antlr-end-of-body): Ditto.
+	(antlr-option-kind): Ditto.
+	(antlr-insert-option-area): Ditto.
+	(antlr-file-dependencies): Ditto.
+
+2003-01-30  Christoph Wedler  <Christoph.Wedler@sap.com>
+
+	* antlr-mode.el: Version 2.2b.
+
+2003-01-29  Christoph Wedler  <Christoph.Wedler@sap.com>
+	
+	* antlr-mode.el: Bug fixes, miscellaneous.
+	(antlr-mode): Make major mode work with cc-mode-5.29 or higher,
+	make it more rubust against changes in cc-mode's style variables
+	by using `boundp' and function `c-init-language-vars' if defined.
+	Reported by Christoph Conrad <christoph.conrad@gmx.de>.
+	(antlr-c++-mode-extra): Only ask if language is not "Cpp".
+	(antlr-read-value): With completion, ignore case.
+	(antlr-run-tool-interactive): New function.
+	(antlr-run-tool): Use it for `interactive' specification.
+
+	* antlr-mode.el: Simplify Emacs/XEmacs compatiblity.
+	(cond-emacs-xemacs): New compile-time macro.
+	(defunx): New compile-time macro.
+	(ignore-errors-x): New compile-time macro.
+	(save-buffer-state-x): New compile-time macro.
+
+ 	(antlr-scan-sexps, antlr-simple-scan-sexps): Deletia.
+	(antlr-scan-lists, antlr-simple-scan-sexps): Deletia.
+	(antlr-simple-default-directory): Deletia.
+	(antlr-default-directory): Define directly.
+	(antlr-simple-read-shell-command): Deletia.
+	(antlr-read-shell-command): Define directly.
+	(antlr-simple-with-displaying-help-buffer): Deletia.
+	(antlr-with-displaying-help-buffer): Define directly.
+	(antlr-fast-invalidate-context-cache): Deletia.
+	(antlr-slow-invalidate-context-cache): Deletia.
+	(antlr-invalidate-context-cache): Define directly.
+	(antlr-fast-syntactic-context): Deletia.
+	(antlr-slow-syntactic-context): Deletia.
+	(antlr-syntactic-context): Define directly.
+
+	(antlr-mode-menu): Use new macros.
+	(antlr-font-lock-additional-keywords): Ditto.
+	(antlr-skip-sexps): Ditto.
+	(antlr-end-of-rule): Ditto.
+	(antlr-beginning-of-rule): Ditto.
+	(antlr-end-of-body): Ditto.
+	(antlr-beginning-of-body): Ditto.
+	(antlr-hide-actions): Ditto.
+	(antlr-option-kind): Ditto.
+
+	* antlr-mode.el: In Emacs, use face attribute :weight, not :bold.
+	(antlr-font-lock-keyword-face): Use new macros.
+	(antlr-font-lock-syntax-face): Ditto.
+	(antlr-font-lock-ruledef-face): Ditto.
+	(antlr-font-lock-tokendef-face): Ditto.
+	(antlr-font-lock-literal-face): Ditto.
+
+2002-05-24  Christoph Wedler  <Christoph.Wedler@sap.com>
+
+	* antlr-mode.el: Version 2.2a.
+
+2002-05-03  Christoph Wedler  <Christoph.Wedler@sap.com>
+
+	* antlr-mode.el: Make context parsing faster on Emacs, for faster
+	syntax highlighting, indentation and imenu support.
+	Suggested by Aaron Davies <adavies42@users.sourceforge.net>.
+	(antlr-slow-context-cache): New variable.
+	(antlr-slow-syntactic-context): Use cache.
+	(antlr-slow-cache-enabling-symbol): New internal variable.
+	(antlr-slow-cache-diff-threshold): New variable.
+	(antlr-fast-invalidate-context-cache): Renamed from
+	antlr-xemacs-bug-workaround.
+	(antlr-imenu-create-index-function): Search from beginning.
+
+	* antlr-mode.el: More sophisticated indentation, i.e., use the
+	indentation engine of cc-mode for most actions.
+	(antlr-c-common-init): Allow nil for `antlr-indent-style'.
+	(antlr-indent-line): Use indentation engine of cc-mode more often.
+	(antlr-indent-at-bol-alist): Only used for header actions.
+	(antlr-disabling-cc-syntactic-symbols): New variable.
+	(antlr-indent-item-regexp): Delete stuff for actions.
+	(antlr-indent-at-bol-alist): With language "Java", indent
+	"package" and "import" at column 0 in header part.
+
+	* antlr-mode.el (antlr-simple-default-directory): Define.
+	(antlr-simple-read-shell-command): Define.
+	(antlr-simple-with-displaying-help-buffer): Define.
+	(antlr-simple-scan-sexps, antlr-simple-scan-lists):
+	Renamed from antlr-scan-{sexps,lists}-internal.
+
+2002-02-28  Christoph Wedler  <Christoph.Wedler@sap.com>
+
+	* antlr-mode: Version 2.2 is released.
+
+	* antlr-mode.el (antlr): Moved to SourceForge.net
+
+2002-02-28  Christoph Wedler  <Christoph.Wedler@sap.com>
+
+	* antlr-mode.el: Minor bug fixes: insert options and indentation.
+	(antlr-option-location): Don't use point as position where to
+	insert options if point is in comment.
+	(antlr-mode): Don't set style here.
+	(antlr-c-common-init): Set style here.  If boundp, set
+	`c-current-comment-prefix' to not break indentation in comments.
+	Hm, I should probably split `c-common-init' from cc-mode into two
+	parts, one of which I could use for antlr-mode.el.
+
+2002-01-31  Christoph Wedler  <Christoph.Wedler@sap.com>
+
+	* antlr-mode.el (antlr-font-lock-additional-keywords): Also
+	hightlight `~' with `antlr-font-lock-syntax-face'.
+	Suggested by Helmut Neukirchen <neukirchen@itm.mu-luebeck.de>.
+
+2001-12-17  Christoph Wedler  <Christoph.Wedler@sap.com>
+
+	* antlr-mode.el: Version 2.1 is released.
+
+2001-12-14  Christoph Wedler  <Christoph.Wedler@sap.com>
+
+	* antlr-mode.el: More sophisticated indentation of cpp directive.
+	Suggested by Holger Oehm <holger.oehm@sap.com>.
+	(antlr-indent-at-bol-alist): New user option.
+	(antlr-indent-line): Use it.
+	(antlr-indent-style): New user option.
+	(antlr-mode): Use it.
+	(antlr-indent-item-regexp): Customize.
+
+2001-12-09  Christoph Wedler  <Christoph.Wedler@sap.com>
+
+	* antlr-mode.el: Syntax highlighting changes.
+	Suggested by Ralph Boland <rboland@unb.ca>.
+	(antlr-font-lock-literal-regexp): New user option.
+	(antlr-font-lock-syntax-face): New face used for :, |, ....
+	(antlr-font-lock-default-face): New face.
+	(antlr-font-lock-additional-keywords): Use them.
+
+2001-10-18  Christoph Wedler  <Christoph.Wedler@sap.com>
+
+	* antlr-mode.el: New command to insert options -- variables.
+	(antlr-mode-map): New binding [C-c C-o].
+	(antlr-mode-menu): New submenus.
+	(antlr-options-use-submenus): New user option.
+	(antlr-tool-version): New user option.
+	(antlr-options-auto-colon): New user option.
+	(antlr-options-style): New user option.
+	(antlr-options-push-mark): New user option.
+	(antlr-options-assign-string): New user option.
+	(antlr-options-headings): New variable.
+
+	* antlr-mode.el: New command to insert options -- specific.
+	(antlr-options-alists): New variable.
+	(antlr-read-value): New function.
+	(antlr-read-boolean): New function.
+	(antlr-language-option-extra): New function.
+	(antlr-language-limit-n-regexp): Change default to higher LIMIT.
+	(antlr-c++-mode-extra): New function.
+	(antlr-grammar-tokens): New function.
+	(antlr-imenu-create-index-function): New optional argument.
+
+	* antlr-mode.el: New command to insert options -- functions.
+	(antlr-insert-option): New command.
+	(antlr-insert-option-interactive): New function.
+	(antlr-options-menu-filter): New function.
+	(antlr-option-kind): New function.
+	(antlr-scan-lists): New alias.
+	(antlr-scan-lists-internal): New function.
+	(antlr-skip-file-prelude): Hack for special SKIP-COMMENT.
+	(antlr-option-level): New function.
+	(antlr-syntactic-grammar-depth): New function.
+	(antlr-option-location): New function.
+	(antlr-insert-option-do): New function.
+	(antlr-option-spec): New function.
+	(antlr-version-string): New function.
+	(antlr-insert-option-existing): New function.
+	(antlr-insert-option-space): New function.
+	(antlr-insert-option-area): New function.
+
+	* antlr-mode.el: New electric keys ":;|&(){}", TAB works better
+	with narrowing.  Menu change.  Miscellaneous.
+	(antlr-mode-menu): Include "Indent Region" and "Customize Antlr".
+	(antlr-mode-map): New bindings for characters in ":;|&(){}".
+	(antlr-electric-character): New command.
+	(antlr-class-header-regexp): New variable.
+	(antlr-font-lock-additional-keywords): Use it.
+	(antlr-imenu-create-index-function): Use it.
+	(antlr-file-dependencies): Use it.
+	(antlr-indent-line): Also works with restrictions.
+	(antlr-indent-command): Interactive spec - changes the buffer.
+	(antlr-language-for-option): Deletia.
+	(antlr-language-option): New function, defined instead.
+	(antlr-mode): Use it.
+
+2001-06-18  Christoph Wedler  <Christoph.Wedler@sap.com>
+
+	* antlr-mode.el: Version 1.4a.
+
+2001-06-04  David B. Malkovsky  <David.Malkovsky@sas.com>
+
+	* antlr-mode.el: Would not work with cc-mode-5.28.
+	(antlr-mode): Use nil if `c-Java-access-key' is not defined.
+
+2000-11-28  Christoph Wedler  <Christoph.Wedler@sap.com>
+
+	* antlr-mode.el: Version 1.4 is released.
+
+2000-11-24  Christoph Wedler  <Christoph.Wedler@sap.com>
+
+	* antlr-mode.el: New commands to run ANTLR from within Emacs and
+	to create Makefile rules.
+	(antlr-tool-command): New user option.
+	(antlr-ask-about-save): New user option.
+	(antlr-makefile-specification): New user option.
+	(antlr-file-formats-alist): New variable.
+	(antlr-special-file-formats): New variable.
+	(antlr-unknown-file-formats): New user option.
+	(antlr-help-unknown-file-text): New variable.
+	(antlr-help-rules-intro): New variable.
+	(antlr-mode-map): Add [C-c C-r] for `antlr-run-tool'.
+	(antlr-mode-menu): Add entries.
+	(antlr-file-dependencies): New function.
+	(antlr-directory-dependencies): New function.
+	(antlr-superclasses-glibs): New function.
+	(antlr-run-tool): New command.
+	(antlr-makefile-insert-variable): New function.
+	(antlr-insert-makefile-rules): New function.
+	(antlr-show-makefile-rules): New command.
+
+	* antlr-mode.el: More Emacs/XEmacs stuff.
+	(antlr-no-action-keywords): New constant with value nil.
+	(antlr-font-lock-keywords-alist): Use it.  Old value would break
+	syntax highlighting in Emacs-21.0.
+	(antlr-default-directory): Emacs/XEmacs dependend function.
+	(antlr-read-shell-command): Ditto.
+	(antlr-with-displaying-help-buffer): Ditto.
+
+2000-11-10  Christoph Wedler  <Christoph.Wedler@sap.com>
+
+	* antlr-mode.el: imenu, parsing and highlighting changes.
+	(antlr-imenu-create-index-function): Don't create extra submenus
+	for definitions in different grammar classes.  It is not necessary
+	for the menu and would make command `imenu' awkward to use.
+	(antlr-skip-file-prelude): With ANTLR-2.7+, you can specify named
+	header actions and use more than one.
+	(antlr-font-lock-tokendef-face): Changed color.
+	(antlr-font-lock-tokenref-face): Changed color.
+	(antlr-font-lock-additional-keywords): Also highlight lowercase.
+	(antlr-mode-syntax-table): New variable.
+	(antlr-mode): Populate and use it instead `java-mode-syntax-table'.
+	(antlr-with-syntax-table): Don't copy syntax table.
+
+2000-08-30  Christoph Wedler  <Christoph.Wedler@sap.com>
+
+	* antlr-mode.el: Minor changes: language setting.
+	(antlr-language-alist): The value for file option "language" can
+	be both an identifier and a string.
+	Reported by Rajesh Radhakrishnan <radhakrs@email.uc.edu>.
+	(antlr-language-limit-n-regexp): Change accordingly.
+
+2000-08-21  Christoph Wedler  <Christoph.Wedler@sap.com>
+
+	* antlr-mode.el: Minor changes: tabs, hiding.
+	(antlr-tab-offset-alist): Set `indent-tabs-mode' to nil instead t.
+	(antlr-action-visibility): Also allow value nil to also hide the
+	braces.  Renamed from `antlr-tiny-action-length'.
+	Suggested by Jay@aol.com.
+	(antlr-hide-actions): Change accordingly.  Hide line if completely
+	hidden action is on a line of its own.
+
+2000-06-05  Christoph Wedler  <Christoph.Wedler@sap.com>
+
+	* antlr-mode.el: Version 1.3 is released.
+
+2000-05-10  Christoph Wedler  <Christoph.Wedler@sap.com>
+
+	* antlr-mode.el: New commands, key bindings, menu entries:
+	hide/unhide actions, upcase/downcase literals.
+	(antlr-tiny-action-length): New user option.
+	(antlr-hide-actions): New command.
+	Suggested by Bjoern Mielenhausen <Bjoern.Mielenhausen@sap.com>.
+ 	(antlr-mode-map): New binding [C-c C-v].
+	(antlr-mode-menu): New entries.
+	(antlr-downcase-literals): New command.
+	(antlr-upcase-literals): Ditto.
+
+	* antlr-mode.el: Minor changes: indendation, mode-name.
+	(antlr-indent-line): Indent cpp directive at column 0.
+	(antlr-mode): Use mode-name prefix "Antlr." instead of "Antlr/".
+
+	* antlr-mode.el: XEmacs bug workaround, XEmacs hint.
+	(antlr-font-lock-additional-keywords): Workaround for intentional
+	bug in XEmacs version of font-lock.
+	(antlr-mode): Set symbol property `mode-name' with value "Antlr".
+	Could be used by a smarter version of
+	`group-buffers-menu-by-mode-then-alphabetically'.
+
+1999-12-16  Christoph Wedler  <Christoph.Wedler@sap.com>
+
+	* antlr-mode.el: Version 1.2 is released.
+	(antlr): This package has a web page.
+
+1999-11-16  Christoph Wedler  <Christoph.Wedler@sap.com>
+
+	* antlr-mode.el: Menu/keymap additions for commenting/uncommenting
+ 	regions.  Suggested by Dale Davis <Dale_Davis@securify.com>.
+ 	(antlr-mode-map): New binding [C-c C-c].
+	(antlr-mode-menu): New entries.
+
+1999-11-11  Christoph Wedler  <Christoph.Wedler@sap.com>
+
+	* antlr-mode.el: Respect Emacs conventions.
+	((require 'cl)): Only use during compilation.
+	(antlr-language-for-option): New function to avoid using `find'.
+	(antlr-mode): Use it.
+	(antlr-with-syntax-table): Define new instead using XEmacs' one.
+	(antlr-imenu-create-index-function): Change accordingly.
+	(antlr-inside-rule-p): Ditto.
+	(antlr-end-of-rule): Ditto.
+	(antlr-end-of-body): Ditto.
+	(antlr-beginning-of-rule): Ditto.
+	(antlr-indent-line): Ditto.
+
+1999-11-04  Christoph Wedler  <Christoph.Wedler@sap.com>
+
+	* antlr-mode.el: Really use `antlr-tab-offset-alist'.
+	(antlr-set-tabs): Don't use hard-coded values.
+
+	* antlr-mode.el: Minor navigation changes.  Not perfect, but this
+ 	won't be possible without a huge time penalty.
+	(antlr-skip-exception-part): Be more specific.
+	(antlr-skip-file-prelude): Don't skip action prelude of next rule.
+  	Renamed from `antlr-skip-grammar-header'.
+	(antlr-next-rule): Change accordingly.
+	(antlr-end-of-body): Ditto.  Better error message.
+	(antlr-beginning-of-body): Better error message.
+	(antlr-imenu-create-index-function): Skip rule action prelude.
+
+	* antlr-mode.el: Minor syntax highlighting changes.
+	(antlr-font-lock-default-face): Deletia.
+	(antlr-font-lock-tokendef-face): Changed color.
+	(antlr-font-lock-tokenref-face): Changed color.
+	(antlr-font-lock-literal-face): Changed color.
+	(antlr-font-lock-additional-keywords): Minor changes.
+
+1999-10-20  Christoph Wedler  <Christoph.Wedler@sap.com>
+
+	* antlr-mode.el: Version 1.1 is released.
