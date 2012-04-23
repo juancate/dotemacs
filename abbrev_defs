@@ -1,4 +1,6 @@
 ;;-*-coding: emacs-mule;-*-
+;; himito's abbrev_defs
+
 (define-abbrev-table 'Buffer-menu-mode-abbrev-table '())
 
 (define-abbrev-table 'Custom-mode-abbrev-table '())
