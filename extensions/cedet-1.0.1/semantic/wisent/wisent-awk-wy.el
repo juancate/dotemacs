@@ -2,8 +2,8 @@
 
 ;; Copyright (C) 2002 David Ponce
 
-;; Author: Jaime Arias <himito@himito-desktop>
-;; Created: 2012-01-17 19:13:38-0500
+;; Author: juancate <juancate@pc>
+;; Created: 2012-01-31 19:46:55-0500
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 

@@ -2,8 +2,8 @@
 
 ;; Copyright (C) 2003, 2004, 2009 Eric M. Ludlam
 
-;; Author: Jaime Arias <himito@himito-desktop>
-;; Created: 2012-01-17 19:14:23-0500
+;; Author: juancate <juancate@pc>
+;; Created: 2012-01-31 19:47:18-0500
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 
