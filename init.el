@@ -60,12 +60,6 @@
 ;; ========== Support Wheel Mouse Scrolling ==========
 (mouse-wheel-mode t)
 
-;; Personalizacion
-(setq-default indent-tabs-mode nil)
-(setq default-tab-width 2)
-(setq indent-line-function 'insert-tab)
-
-
 ;; ========== Place Backup Files in Specific Directory ==========
 
 ;; Enable backup files.
@@ -85,4 +79,12 @@
 (load "modes")
 (load "personal")
 
+;; Personalizacion
+(setq default-tab-width 4)
+(setq indent-line-function 'insert-tab)
+
+(defvaralias 'c-basic-offset 'tab-width)
+(defvaralias 'cperl-indent-level 'tab-width)
+(setq-default indent-tabs-mode nil)
+;(setq standard-indent 4)
 
