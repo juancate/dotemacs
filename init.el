@@ -20,14 +20,14 @@
 ;; toggle-truncate-long-line
 (setq-default truncate-lines t)
 
-;; Disable scrollbar 
-(toggle-scroll-bar -1) 
+;; Disable scrollbar
+(toggle-scroll-bar -1)
 
 ;; Disable toolbar
-(tool-bar-mode -1) 
+(tool-bar-mode -1)
 
 ;; Don't show welcome screen
-(setq inhibit-splash-screen t) 
+(setq inhibit-splash-screen t)
 
 ;; Don't show scratch message
 (setq initial-scratch-message nil)
@@ -102,10 +102,6 @@
 
 ;; Remove trailing whitespaces
 (global-set-key [f6] 'delete-trailing-whitespace)
-
-;; Change font size
-(global-set-key [(meta -)] 'font-smaller)
-(global-set-key [(meta \+)] 'font-larger)
 
 ;; Align
 (global-set-key "\C-x\C-a" 'align-regexp)

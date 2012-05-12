@@ -23,15 +23,18 @@
 
 
 ;; ========== AutoPair =========================
-(add-to-list 'load-path "~/.emacs.d/extensions/autopair/") ;; comment if autopair.el is in standard load path 
+(add-to-list 'load-path "~/.emacs.d/extensions/autopair/") ;; comment if autopair.el is in standard load path
 (require 'autopair)
-(autopair-global-mode) ;; enable autopair in all buffers 
+(autopair-global-mode) ;; enable autopair in all buffers
 
 ;; ========= ColorTheme ========================
-(add-to-list 'load-path "~/.emacs.d/extensions/color-theme-6.6.0")
-(require 'color-theme)
-(color-theme-initialize)
-(color-theme-dark-himito)
+
+(if (display-graphic-p)
+  (progn
+    (add-to-list 'load-path "~/.emacs.d/extensions/color-theme-6.6.0")
+    (require 'color-theme)
+    (color-theme-initialize)
+    (color-theme-dark-himito)))
 
 
 ;; ================ YASnippet ========================================
@@ -66,7 +69,7 @@
 (add-to-list 'load-path "~/.emacs.d/extensions/ecb-2.40")
 ;(add-to-list 'load-path "/usr/share/emacs/site-lisp/ecb")
 
-;; To load ecb first after starting it by ecb-activate 
+;; To load ecb first after starting it by ecb-activate
 (require 'ecb-autoloads)
 
 ;; some variables
