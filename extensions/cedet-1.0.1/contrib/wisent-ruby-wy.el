@@ -2,8 +2,8 @@
 
 ;;; Copyright (C) 2007 Daniel Debertin (debertin@gmail.com)
 
-;; Author: juancate <juancate@pc>
-;; Created: 2012-01-31 19:47:25-0500
+;; Author: Julián Camargo <juancate@pc>
+;; Created: 2012-05-11 18:29:52-0500
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 

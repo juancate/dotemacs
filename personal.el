@@ -32,7 +32,6 @@
 (require 'color-theme)
 (color-theme-initialize)
 (color-theme-dark-himito)
-;(color-dark-theme)
 
 
 ;; ================ YASnippet ========================================
@@ -41,16 +40,16 @@
 ;(yas/global-mode 1)
 ;(setq yas/snippet-dirs '("~/.emacs.d/extensions/yasnippet/snippets" "~/.emacs.d/extensions/yasnippet/extra/imported"))
 (yas/initialize)
-(yas/load-directory "~/.emacs.d/extensions/yasnippet-0.6.1c/snippets")
+(yas/load-directory "~/.emacs.d/extensions/yasnippet/snippets")
 
 ;; ================ AUCTex ======================================
-(add-to-list 'load-path "~/.emacs.d/extensions/auctex-11.86")
-(load "auctex.el" nil t t)
-(load "preview-latex.el" nil t t)
+;(add-to-list 'load-path "~/.emacs.d/extensions/auctex-11.86")
+;(load "auctex.el" nil t t)
+;(load "preview-latex.el" nil t t)
 
-(setq TeX-auto-save t)
-(setq TeX-parse-self t)
-(setq TeX-PDF-mode t)
+;(setq TeX-auto-save t)
+;(setq TeX-parse-self t)
+;(setq TeX-PDF-mode t)
 
 ;(custom-set-variables
 ; '(TeX-view-program-list (quote (("Evince" "okular %o"))))
@@ -60,8 +59,8 @@
 ;; ============= CEDET ============================
 
 ;; Load CEDET
-;(load-file "~/.emacs.d/extensions/cedet-1.0.1/common/cedet.el")
-(load-file "/usr/share/emacs/site-lisp/cedet/common/cedet.el")
+(load-file "~/.emacs.d/extensions/cedet-1.0.1/common/cedet.elc")
+;(load-file "/usr/share/emacs/site-lisp/cedet/common/cedet.el")
 
 ;; Load ECB
 (add-to-list 'load-path "~/.emacs.d/extensions/ecb-2.40")

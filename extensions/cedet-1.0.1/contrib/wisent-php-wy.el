@@ -2,8 +2,8 @@
 
 ;; Copyright (C) 2008 Free Software Foundation
 
-;; Author: juancate <juancate@pc>
-;; Created: 2012-01-31 19:47:26-0500
+;; Author: Julián Camargo <juancate@pc>
+;; Created: 2012-05-11 18:29:53-0500
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 

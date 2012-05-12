@@ -2,8 +2,8 @@
 
 ;; Copyright (C) 2002, 2003, 2004, 2007 Richard Kim
 
-;; Author: juancate <juancate@pc>
-;; Created: 2012-01-31 19:47:03-0500
+;; Author: Julián Camargo <juancate@pc>
+;; Created: 2012-05-11 18:29:14-0500
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 
