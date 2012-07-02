@@ -62,7 +62,7 @@
 ;; ============= CEDET ============================
 
 ;; Load CEDET
-(load-file "~/.emacs.d/extensions/cedet-1.0.1/common/cedet.elc")
+(load-file "~/.emacs.d/extensions/cedet-1.0.1/common/cedet.el")
 ;(load-file "/usr/share/emacs/site-lisp/cedet/common/cedet.el")
 
 ;; Load ECB
@@ -74,10 +74,10 @@
 
 ;; some variables
 (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(column-number-mode t)
  '(ecb-options-version "2.40")
  '(ecb-primary-secondary-mouse-buttons (quote mouse-1--mouse-2))
@@ -94,4 +94,5 @@
 
 ;; activate ecb by default
 (ecb-activate)
+
 

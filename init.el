@@ -12,7 +12,7 @@
 
 (add-to-list 'load-path "~/.emacs.d")
 
-(load-file "~/.emacs.d/hooks.elc")
+(load-file "~/.emacs.d/hooks.el")
 
 ;; Don't show the menu unless we are using X
 ;(menu-bar-mode -1)
@@ -70,11 +70,11 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#101e2e" :foreground "#eeeeec" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 138 :width normal :foundry "unknown" :family "Inconsolata")))))
+; '(default ((t (:inherit nil :stipple nil :background "#101e2e" :foreground "#eeeeec" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 138 :width normal :foundry "unknown" :family "Inconsolata")))))
+ '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 138 :width normal :foundry "unknown" :family "Inconsolata")))))
 
-
-(load-file "~/.emacs.d/modes.elc")
-(load-file "~/.emacs.d/personal.elc")
+(load-file "~/.emacs.d/modes.el")
+(load-file "~/.emacs.d/personal.el")
 
 ;; Personalizacion
 ;; ===== Set standard indent to 4 spaces ====

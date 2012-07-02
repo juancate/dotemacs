@@ -4,8 +4,8 @@
 (add-to-list 'auto-mode-alist '("\\.g\\'" . antlr-mode))
 
 ;; =========== Python Mode ===================
-(add-to-list 'load-path "~/.emacs.d/extensions/python-mode-6.0/")
-(autoload 'python-mode "python-mode" "Python Mode." t)
+;(add-to-list 'load-path "~/.emacs.d/extensions/python-mode-6.0/")
+;(autoload 'python-mode "python-mode" "Python Mode." t)
 
 ;; =========== Php Mode ======================
 ;(autoload 'php-mode "php-mode.el" "Php mode." t)
