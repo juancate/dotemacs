@@ -30,11 +30,11 @@
 ;; ========= ColorTheme ========================
 
 (if (display-graphic-p)
-  (progn
-    (add-to-list 'load-path "~/.emacs.d/extensions/color-theme-6.6.0")
-    (require 'color-theme)
-    (color-theme-initialize)
-    (color-theme-dark-himito)))
+    (progn
+      (add-to-list 'load-path "~/.emacs.d/extensions/color-theme-6.6.0")
+      (require 'color-theme)
+      (color-theme-initialize)
+      (color-theme-dark-himito)))
 
 
 ;; ================ YASnippet ========================================
@@ -93,6 +93,18 @@
 (global-set-key [f12] 'ecb-toggle-ecb-windows)
 
 ;; activate ecb by default
-(ecb-activate)
+;(ecb-activate)
 
+;; highlight indentation
+;(add-to-list 'load-path (expand-file-name "~/.emacs.d/extensions/Highlight-Indentation"))
+;(require 'highlight-indentation)
+
+;(set-face-background 'highlight-indentation-face "#282828")
+;(set-face-background 'highlight-indentation-current-column-face "#404040")
+
+;(global-set-key [f11] 'highlight-indentation-mode)
+
+;(add-hook 'c-mode-hook 'highlight-indentation-mode)
+;(add-hook 'c++-mode-hook 'highlight-indentation-mode)
+;(add-hook 'c++-mode-hook 'highlight-indentation-current-column-mode)
 

@@ -70,8 +70,7 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
-; '(default ((t (:inherit nil :stipple nil :background "#101e2e" :foreground "#eeeeec" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 138 :width normal :foundry "unknown" :family "Inconsolata")))))
- '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 138 :width normal :foundry "unknown" :family "Inconsolata")))))
+ '(default ((t (:inherit nil :stipple nil :background "#101e2e" :foreground "#eeeeec" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 113 :width normal :foundry "unknown" :family "Droid Sans Mono")))))
 
 (load-file "~/.emacs.d/modes.el")
 (load-file "~/.emacs.d/personal.el")
@@ -107,3 +106,16 @@
 (global-set-key "\C-x\C-a" 'align-regexp)
 
 ;(server-start)
+(custom-set-variables
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(column-number-mode t)
+ '(ecb-options-version "2.40")
+ '(ecb-primary-secondary-mouse-buttons (quote mouse-1--mouse-2))
+ '(ecb-source-path (quote ("/home/juancate")))
+ '(ecb-tip-of-the-day nil)
+ '(ecb-windows-width 20)
+ '(show-paren-mode t)
+ '(tool-bar-mode nil))
