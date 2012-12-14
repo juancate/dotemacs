@@ -108,3 +108,6 @@
 ;(add-hook 'c++-mode-hook 'highlight-indentation-mode)
 ;(add-hook 'c++-mode-hook 'highlight-indentation-current-column-mode)
 
+(add-to-list 'load-path "~/.emacs.d/extensions/emacs-powerline")
+(require 'powerline)
+
